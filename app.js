@@ -1,25 +1,31 @@
-// desafio 1
-alert("¡Bienvenida y bienvenido a nuestro sitio web!");
-// desafio 2
-let name = "Lua"
-// desafio 3
-let age = 25
-// desafio 4
-let numerodeVentas = 50
-// desafio 5
-let saldoDisponible = 1000
-// desafio 6
-alert("¡Error! Completa todos los campos");
-// desafio 7
-let mensajedeError = "¡Error! Completa todos los campos";
-alert(mensajedeError);
-// desafio 8
-let nameUser = prompt("Ingrese su nombre:");
-// desafio 9
-let edad = prompt("Ingrese su edad:");
-// desafio 10 Le agregue un else JEJE
-if (edad >= 18) {
-    alert("¡Puedes obtener tu licencia de conducir!");
+// desafio 1: Día de la semana
+let diaSemana = prompt("¿Qué día de la semana es?");
+if (diaSemana === "Sábado" || diaSemana === "Domingo") {
+    alert("¡Buen fin de semana!");
 } else {
-    alert("Lo siento, necesitas ser mayor de edad para obtener tu licencia.");
+    alert("¡Buena semana!");
 }
+
+// desafio 2: Número positivo o negativo
+let numero = prompt("Ingresa un número:");
+if (numero >= 0) {
+    alert("El número es positivo.");
+} else {
+    alert("El número es negativo.");
+}
+
+// desafio 3: Sistema de puntuación
+let puntuacion = prompt("Ingresa tu puntuación en el juego:");
+if (puntuacion >= 100) {
+    alert("¡Felicidades, has ganado!");
+} else {
+    alert("Intentalo nuevamente para ganar.");
+}
+
+// desafio 4: Mensaje de saldo con template string
+let saldo = prompt("Ingresa el saldo de tu cuenta:");
+alert(`Tu saldo actual es de $${saldo}`);
+
+// desafio 5: Bienvenida con nombre
+let nombreUsuario = prompt("Ingresa tu nombre:");
+alert(`¡Bienvenido/a, ${nombreUsuario}!`);
