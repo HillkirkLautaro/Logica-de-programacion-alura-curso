@@ -40,3 +40,31 @@ if (isNaN(numero) || numero < 0) {
     
     console.log("¡Cuenta regresiva finalizada!");
 }
+
+// desafio 4 - Contador de numeroUsuario a 0
+// Solicitar al usuario un número para contar hacia arriba
+let numeroUsuario = parseInt(prompt("Ingrese un número para contar hacia arriba:"));
+
+// Validar que el valor ingresado sea un número válido
+if (isNaN(numeroUsuario) || numeroUsuario < 0) {
+    console.log("Por favor ingrese un número válido mayor o igual a 0");
+}
+else {
+    console.log(`Iniciando cuenta ascendente desde 0 hasta ${numeroUsuario}:`);
+    
+    // Bucle while para contar hacia arriba
+    let contadorAscendente = 0;
+    while (contadorAscendente <= numeroUsuario) {
+        console.log(contadorAscendente);
+        contadorAscendente++; // Incrementar el contador en cada iteración
+        
+        // Pequeña pausa para mejor visualización (opcional)
+        // Esto simula un retraso de 1 segundo entre cada número
+        const fechaInicio = Date.now();
+        while (Date.now() - fechaInicio < 1000) {
+            // Esperar 1 segundo
+        }
+    }
+    
+    console.log("¡Cuenta ascendente finalizada!");
+}
