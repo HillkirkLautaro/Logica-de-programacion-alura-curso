@@ -1,19 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <title>Curso de Lógica de Programación.</title>
-    <meta name="description" content="Curso de Lógica de Programación" />
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>JS Game</title>
 </head>
+
 <body>
-    <header style ="background-color: #f1f1f1; padding: 20px; text-align: center;">     
-        <h1 style="text-align: center;">Curso de Lógica de Programación</h1>
-        <p style="text-align: center;">Este curso forma parte de mi camino como estudiante ONE. Gracias Alura Latam y Oracle por la oportunidad.</p>
+    <div class="container">
+        <div class="container__contenido">
+            <img src="./img/robot.png" alt="Robot" class="container__imagen-robot" />
+            <div class="container__informaciones">
+                <img src="./img/trophy.png" alt="Icono de trofeo" />
+                 <div class="container__texto">
+                    <h1><span class="container__texto-azul">Correcto!</span></h1>
+                    <h2>Descubriste el número secreto!</h2>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="app.js"></script>
-    </header>
-    <footer style="background-color: #f1f1f1; text-align: center; position: fixed; bottom: 0; width: 100%;">
-        <p>&copy; 2025 Alura LATAM - Curso de Lógica de Programación</p>
-    </footer>
 </body>
 </html>

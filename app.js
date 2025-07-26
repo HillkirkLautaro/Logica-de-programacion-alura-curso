@@ -1,25 +1,35 @@
-// desafio 1
-alert("¡Bienvenida y bienvenido a nuestro sitio web!");
-// desafio 2
-let name = "Lua"
-// desafio 3
-let age = 25
-// desafio 4
-let numerodeVentas = 50
-// desafio 5
-let saldoDisponible = 1000
-// desafio 6
-alert("¡Error! Completa todos los campos");
-// desafio 7
-let mensajedeError = "¡Error! Completa todos los campos";
-alert(mensajedeError);
-// desafio 8
-let nameUser = prompt("Ingrese su nombre:");
-// desafio 9
-let edad = prompt("Ingrese su edad:");
-// desafio 10 Le agregue un else JEJE
-if (edad >= 18) {
-    alert("¡Puedes obtener tu licencia de conducir!");
-} else {
-    alert("Lo siento, necesitas ser mayor de edad para obtener tu licencia.");
+//Variables
+let numeroSecreto = Math.floor(Math.random()*10)+1;
+let numeroUsuario = 0;
+let intentos = 1;
+//let palabraVeces = 'vez';
+let maximosIntentos = 3;
+
+
+while (numeroUsuario != numeroSecreto) {
+    numeroUsuario = parseInt(prompt("Me indicas un número entre 1 y 10 por favor:"));
+
+    console.log(typeof(numeroUsuario));
+    if (numeroUsuario == numeroSecreto) {
+        //Acertamos, fue verdadera la condición
+        alert(`Acertaste, el número es: ${numeroUsuario}. Lo hiciste en ${intentos} ${intentos == 1 ? 'vez' : 'veces' }`);
+    } else {
+        if (numeroUsuario > numeroSecreto) {
+            alert('El número secreto es menor');
+        } else {
+            alert('El número secreto es mayor');
+        }
+        //Incrementamos el contador cuando no acierta
+        //intentos = intentos + 1;
+        //intentos += 1;
+        intentos++;
+
+        //palabraVeces = 'veces';
+        if (intentos > maximosIntentos) {
+            alert(`Llegaste al número máximo de ${maximosIntentos} intentos`);
+            break;
+        }
+        //La condición no se cumplió
+        //alert('Lo siento, no acertaste el número');
+    }
 }
