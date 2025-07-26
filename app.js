@@ -13,3 +13,30 @@ while (contador1 >= 0) {
   console.log(contador1);
   contador1--;
 }
+
+// desafio 3 - Contador de 0 a numeroUsuario
+
+// Solicitar al usuario un número para la cuenta regresiva
+let numero = parseInt(prompt("Ingrese un número para la cuenta regresiva:"));
+
+// Validar que el valor ingresado sea un número válido
+if (isNaN(numero) || numero < 0) {
+    console.log("Por favor ingrese un número válido mayor o igual a 0");
+} else {
+    console.log(`Iniciando cuenta regresiva desde ${numero}:`);
+    
+    // Bucle while para la cuenta regresiva
+    while (numero >= 0) {
+        console.log(numero);
+        numero--; // Decrementar el número en cada iteración
+        
+        // Pequeña pausa para mejor visualización (opcional)
+        // Esto simula un retraso de 1 segundo entre cada número
+        const fechaInicio = Date.now();
+        while (Date.now() - fechaInicio < 1000) {
+            // Esperar 1 segundo
+        }
+    }
+    
+    console.log("¡Cuenta regresiva finalizada!");
+}
