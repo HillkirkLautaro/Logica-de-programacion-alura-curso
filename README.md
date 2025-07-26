@@ -1,33 +1,38 @@
-# Desafío: hora de practicar
- 
-Practicar la lógica de programación, incluyendo conceptos como variables, condicionales (if), alertas (alert), solicitudes (prompt), es esencial para tu carrera y desarrollo.
+# 🎯 Juego del Número Secreto
 
-Estos fundamentos proporcionan la base para resolver problemas de manera estructurada, tomar decisiones en el código, crear bucles controlados e interactuar eficazmente con las personas.
+Un juego simple en JavaScript donde el usuario debe adivinar un número secreto. Se puede elegir entre 3 niveles de dificultad:
 
-Comprender estos conceptos no solo facilita el aprendizaje de nuevos lenguajes y tecnologías, sino que también te capacita para generar soluciones innovadoras, depurar de manera eficiente y mantener la calidad a lo largo del ciclo de vida del software.
+- Fácil: de 1 a 10  
+- Medio: de 1 a 100  
+- Difícil: de 1 a 1000  
 
-Por lo tanto, invertir tiempo en estos principios desde el principio es fundamental para construir una carrera exitosa en el campo de la programación.
+---
 
-Con esto en mente, hemos creado una lista de actividades (no obligatorias) centradas en la práctica para mejorar aún más tu experiencia de aprendizaje. ¿Listo para practicar?
+## 🚀 ¿Cómo funciona?
 
-Desafíos
+1. Al iniciar, se pide al usuario que seleccione un rango de dificultad usando `prompt()`:
+   - Opción 1 → Número secreto entre 1 y 10
+   - Opción 2 → Número secreto entre 1 y 100
+   - Opción 3 → Número secreto entre 1 y 1000
 
-1 - Muestra una alerta con el mensaje "¡Bienvenida y bienvenido a nuestro sitio web!".
+2. Luego, el usuario tiene **hasta 3 intentos** para adivinar el número secreto.
 
-2 - Declara una variable llamada nombre y asígnale el valor "Lua".
+3. Se muestra un mensaje con pistas si el número ingresado es mayor o menor que el número secreto.
 
-3 - Crea una variable llamada edady asígnale el valor 25.
+4. El juego finaliza si el usuario acierta o se queda sin intentos.
 
-4 - Establece una variable numeroDeVentas y asígnale el valor 50.
+---
 
-5 - Establece una variable saldoDisponible y asígnale el valor 1000.
+## 🛠️ Tecnologías usadas
 
-6 - Muestra una alerta con el texto "¡Error! Completa todos los campos".
+- HTML (opcional para integrarlo en navegador)
+- JavaScript (puro)
+- `prompt()`, `alert()` y `console.log()` para interacción básica
 
-7 - Declara una variable llamada mensajeDeError y asígnale el valor "¡Error! Completa todos los campos". Ahora muestra una alerta con el valor de la variable mensajeDeError .
+---
 
-8- Utiliza un prompt para preguntar el nombre del usuario y almacénalo en la variable nombre.
+## 📦 Cómo ejecutarlo
 
-9 - Pide al usuario que ingrese su edad usando un prompt y almacénala en la variable edad.
-
-10 - Ahora, si la edad es mayor o igual a 18, muestra una alerta con el mensaje "¡Puedes obtener tu licencia de conducir!"
+1. Cloná o descargá el repositorio.
+2. Creá un archivo `index.html` y vinculá `app.js`, o abrí la consola del navegador y pegá el contenido del script directamente.
+3. ¡Jugá!

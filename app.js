@@ -1,35 +1,47 @@
-//Variables
-let numeroSecreto = Math.floor(Math.random()*10)+1;
+// Selección del rango
+let rango = parseInt(prompt("Selecciona el rango:\n1 - de 1 a 10\n2 - de 1 a 100\n3 - de 1 a 1000"));
+let limiteSuperior;
+
+if (rango === 1) {
+    limiteSuperior = 10;
+} else if (rango === 2) {
+    limiteSuperior = 100;
+} else if (rango === 3) {
+    limiteSuperior = 1000;
+} else {
+    alert("Selección inválida. Se usará el rango por defecto de 1 a 10.");
+    limiteSuperior = 10;
+}
+
+// Variables del juego
+let numeroSecreto = Math.floor(Math.random() * limiteSuperior) + 1;
 let numeroUsuario = 0;
 let intentos = 1;
-//let palabraVeces = 'vez';
 let maximosIntentos = 3;
 
+while (numeroUsuario !== numeroSecreto) {
+    numeroUsuario = parseInt(prompt(`Adivina el número secreto entre 1 y ${limiteSuperior}:`));
 
-while (numeroUsuario != numeroSecreto) {
-    numeroUsuario = parseInt(prompt("Me indicas un número entre 1 y 10 por favor:"));
+    console.log(`Intento ${intentos}: el usuario ingresó ${numeroUsuario}`);
 
-    console.log(typeof(numeroUsuario));
-    if (numeroUsuario == numeroSecreto) {
-        //Acertamos, fue verdadera la condición
-        alert(`Acertaste, el número es: ${numeroUsuario}. Lo hiciste en ${intentos} ${intentos == 1 ? 'vez' : 'veces' }`);
+    if (numeroUsuario === numeroSecreto) {
+        alert(`¡Acertaste! El número era ${numeroUsuario}. Lo hiciste en ${intentos} ${intentos === 1 ? 'intento' : 'intentos'}.`);
+        break;
     } else {
         if (numeroUsuario > numeroSecreto) {
-            alert('El número secreto es menor');
+            alert("El número secreto es menor.");
         } else {
-            alert('El número secreto es mayor');
+            alert("El número secreto es mayor.");
         }
-        //Incrementamos el contador cuando no acierta
-        //intentos = intentos + 1;
-        //intentos += 1;
-        intentos++;
+    }
 
-        //palabraVeces = 'veces';
-        if (intentos > maximosIntentos) {
-            alert(`Llegaste al número máximo de ${maximosIntentos} intentos`);
-            break;
-        }
-        //La condición no se cumplió
-        //alert('Lo siento, no acertaste el número');
+    intentos++;
+
+    if (intentos > maximosIntentos) {
+        alert(`Agotaste los ${maximosIntentos} intentos. El número era ${numeroSecreto}.`);
+        break;
     }
 }
+
+// app.js - Juego de Adivinanza de Números
+// Este script permite al usuario adivinar un número secreto dentro de un rango seleccionado.
